@@ -1,0 +1,23 @@
+body {
+	font-family: sans-serif;
+}
+
+.navbar {
+	background-color: #006699;
+	border: 2px solid black;
+	height: 50px;
+}
+
+.nav-links a {
+	float: left;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    border-right: 2px solid black;
+}
+
+.nav-links a:hover {
+	background-color: #005985;
+}
