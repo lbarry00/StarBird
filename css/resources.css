@@ -1,23 +1,90 @@
-body {
-    font-family: sans-serif;
+.center-text{
+position: relative;
+  left: -25px;
+  width: 100%;
+  text-align: center;
 }
 
-.navbar {
-    background-color: #006699;
-    border: 2px solid black;
-    height: 50px;
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 400%;
 }
 
-.nav-links a {
-    float: left;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    border-right: 2px solid black;
+h2 {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 250%;
 }
 
-.nav-links a:hover {
-    background-color: #005985;
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 130%;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: inline;
+  float: left;
+  margin-left: 40px;
+}
+
+ul.card {
+  margin: 50px;
+  list-style-type: none;
+}
+
+li.card {
+  width: 350px;
+  background-color:#3E72F0;
+  margin: 10px 0px;
+  display: inline-block;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.desc {
+  padding: 5px 50px;
+  background-color: white;
+  width: 250px;
+  color: black;
+}
+
+.navbar{
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 200%;
+  list-style-type: none;
+  margin: 0px -10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F9519A;
+  position: sticky;
+  top: 0;
+
+}
+
+.navbar li{
+  float: left;
+  border-right:3px solid rgb(255, 255, 255);
+
+}
+
+.navbar li a{
+  display: inline-block;
+  color: #270986;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li:last-child {
+  border-right: none;
+}
+
+.navbar li a:hover:not(.active) {
+  color: #D9C2C2;
+}
+
+.active {
+  background-color: #9740F9;
 }
