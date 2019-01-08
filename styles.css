@@ -1,12 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 
-.css-selector {
-  font-family: 'Raleway', sans-serif;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  font-family: 'Lobster', cursive;
-}
-
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 400%;
@@ -39,7 +33,7 @@ ul.navbar{
   background-color: #F9519A;
   position: sticky;
   top: 0;
-  
+
 }
 
 ul.navbar li{
@@ -69,7 +63,7 @@ ul.navbar li a:hover:not(.active) {
 }
 
 .main {
-  margin-left: 6px; 
+  margin-left: 6px;
   padding: 0px 10px;
 }
 
@@ -155,4 +149,3 @@ li.card {
   width: 250px;
   color: black;
 }
-
