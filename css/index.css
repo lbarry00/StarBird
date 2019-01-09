@@ -1,17 +1,14 @@
 body {
   overflow: hidden;
-<<<<<<< HEAD
   padding: 0;
   margin: 0;
   border: 0;
   height: 100%;
-=======
 }
 
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 48px;
->>>>>>> 0d76f1ded3280777ab89036db97b3b00d630e4a9
 }
 
 h2 {
@@ -20,14 +17,11 @@ h2 {
 }
 
 .logo {
-<<<<<<< HEAD
   position: relative;
   left: 30px;
   top: -5px;
-=======
   width: 75px;
   height: 75px;
->>>>>>> 0d76f1ded3280777ab89036db97b3b00d630e4a9
   display: inline;
   float: left;
 }
@@ -41,11 +35,7 @@ h2 {
 
 .navbar{
   font-family: 'ZCOOL QingKe HuangYou', cursive;
-<<<<<<< HEAD
-  font-size: 160%;
-=======
   font-size: 20px;
->>>>>>> 0d76f1ded3280777ab89036db97b3b00d630e4a9
   list-style-type: none;
   margin: 0px -10px;
   padding: 0;
@@ -82,11 +72,8 @@ h2 {
 
 .bird {
   z-index: 3;
-<<<<<<< HEAD
   top: 20em;
   left: 10em;
-=======
->>>>>>> 0d76f1ded3280777ab89036db97b3b00d630e4a9
   position: fixed;
   left: 50px;
   top: 300px;
@@ -97,15 +84,12 @@ h2 {
   position: fixed;
   margin: 0;
   background: url("../img/main_bg.png") repeat-x;
-<<<<<<< HEAD
   height: 500px;
   width: 13635px;
   animation: slide 90s linear infinite;
-=======
   width: 9000px;
   height: 74%;
   animation: slide 60s linear infinite;
->>>>>>> 0d76f1ded3280777ab89036db97b3b00d630e4a9
 }
 
 @keyframes slide{
@@ -122,11 +106,8 @@ h2 {
   position: fixed;
   margin: 0px;
   background: url("../img/asteroid_layer.png") repeat-x;
-<<<<<<< HEAD
   height: 500px;
-=======
   height: 100%;
->>>>>>> 0d76f1ded3280777ab89036db97b3b00d630e4a9
   width: 6060px;
   animation: slide2 30s linear infinite;
 }

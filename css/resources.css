@@ -1,13 +1,9 @@
 body {
   overflow-x: hidden;
-<<<<<<< HEAD
-  overflow: hidden;
   padding: 0;
   margin: 0;
   border: 0;
   height: 100%;
-=======
->>>>>>> 0d76f1ded3280777ab89036db97b3b00d630e4a9
 }
 
 .center-text{
@@ -17,14 +13,11 @@ body {
   text-align: center;
 }
 
-<<<<<<< HEAD
-=======
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 48px;
 }
 
->>>>>>> 0d76f1ded3280777ab89036db97b3b00d630e4a9
 h2 {
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   font-size: 200%;
@@ -36,14 +29,11 @@ p {
 }
 
 .logo {
-<<<<<<< HEAD
   position: relative;
   left: 30px;
   top: -5px;
-=======
   width: 75px;
   height: 75px;
->>>>>>> 0d76f1ded3280777ab89036db97b3b00d630e4a9
   display: inline;
   float: left;
 }
@@ -55,11 +45,7 @@ ul.card {
 
 li.card {
   background-color:#3E72F0;
-<<<<<<< HEAD
-  margin: 10px 5px;
-=======
   margin: 30px 10px;
->>>>>>> 0d76f1ded3280777ab89036db97b3b00d630e4a9
   display: inline-block;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   text-align: center;
@@ -75,11 +61,7 @@ li.card {
 
 .navbar{
   font-family: 'ZCOOL QingKe HuangYou', cursive;
-<<<<<<< HEAD
-  font-size: 160%;
-=======
   font-size: 20px;
->>>>>>> 0d76f1ded3280777ab89036db97b3b00d630e4a9
   list-style-type: none;
   margin: 0px -10px;
   padding: 0;
