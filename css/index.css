@@ -1,6 +1,10 @@
+body {
+  overflow: hidden;
+}
+
 h1 {
   font-family: 'Lobster', cursive;
-  font-size: 400%;
+  font-size: 48px;
 }
 
 h2 {
@@ -9,15 +13,15 @@ h2 {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   display: inline;
   float: left;
   margin-left: 40px;
 }
 
 .center-text{
-position: relative;
+  position: relative;
   left: -25px;
   width: 100%;
   text-align: center;
@@ -25,7 +29,7 @@ position: relative;
 
 .navbar{
   font-family: 'ZCOOL QingKe HuangYou', cursive;
-  font-size: 200%;
+  font-size: 20px;
   list-style-type: none;
   margin: 0px -10px;
   padding: 0;
@@ -33,20 +37,18 @@ position: relative;
   background-color: #F9519A;
   position: sticky;
   top: 0;
-
 }
 
 .navbar li{
   float: left;
   border-right:3px solid rgb(255, 255, 255);
-
 }
 
 .navbar li a{
   display: inline-block;
   color: #270986;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 16px;
   text-decoration: none;
 }
 
@@ -62,14 +64,11 @@ position: relative;
   background-color: #9740F9;
 }
 
-.viewer {
-  overflow: hidden;
-}
-
 .bird {
   z-index: 3;
-  margin: 50px;
   position: fixed;
+  left: 50px;
+  top: 300px;
 }
 
 .sliding-bg {
@@ -77,8 +76,8 @@ position: relative;
   position: fixed;
   margin: 0;
   background: url("../img/main_bg.png") repeat-x;
-  height: 600px;
-  width: 9090px;
+  width: 9000px;
+  height: 74%;
   animation: slide 60s linear infinite;
 }
 
@@ -96,7 +95,7 @@ position: relative;
   position: fixed;
   margin: 0px;
   background: url("../img/asteroid_layer.png") repeat-x;
-  height: 600px;
+  height: 100%;
   width: 6060px;
   animation: slide2 30s linear infinite;
 }

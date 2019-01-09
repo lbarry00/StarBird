@@ -1,5 +1,9 @@
+body {
+  overflow-x: hidden;
+}
+
 .center-text{
-position: relative;
+  position: relative;
   left: -25px;
   width: 100%;
   text-align: center;
@@ -7,7 +11,7 @@ position: relative;
 
 h1 {
   font-family: 'Lobster', cursive;
-  font-size: 400%;
+  font-size: 48px;
 }
 
 h2 {
@@ -21,8 +25,8 @@ p {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   display: inline;
   float: left;
   margin-left: 40px;
@@ -34,9 +38,8 @@ ul.card {
 }
 
 li.card {
-  width: 350px;
   background-color:#3E72F0;
-  margin: 10px 0px;
+  margin: 30px 10px;
   display: inline-block;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   text-align: center;
@@ -52,7 +55,7 @@ li.card {
 
 .navbar{
   font-family: 'ZCOOL QingKe HuangYou', cursive;
-  font-size: 200%;
+  font-size: 20px;
   list-style-type: none;
   margin: 0px -10px;
   padding: 0;
@@ -60,7 +63,6 @@ li.card {
   background-color: #F9519A;
   position: sticky;
   top: 0;
-
 }
 
 .navbar li{
@@ -73,7 +75,7 @@ li.card {
   display: inline-block;
   color: #270986;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 16px;
   text-decoration: none;
 }
 
