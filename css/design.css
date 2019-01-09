@@ -1,6 +1,14 @@
+body {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+}
+
 h2 {
   font-family: 'ZCOOL QingKe HuangYou', cursive;
-  font-size: 250%;
+  font-size: 200%;
 }
 
 p {
@@ -17,7 +25,7 @@ position: relative;
 
 .logo {
   position: relative;
-  left: 1em;
+  left: 30px;
   top: -5px;
   display: inline;
   float: left;
@@ -63,14 +71,26 @@ position: relative;
 }
 
 .container {
-  margin: 50px 150px;
-  width: 45%;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 50%;
+  height: 45%;
   align-self: center;
-  border: 5px black;
-  padding: 50px;
+  background-color: rgba(255, 255, 255, .8);
+  padding: 30px;
 }
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.bg-image {
+  background-image: url("../img/flat.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10%;
+  margin: 0 -10;
+  border: 0;
 }

@@ -1,3 +1,12 @@
+body {
+  overflow-x: hidden;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+}
+
 .center-text{
 position: relative;
   left: -25px;
@@ -16,11 +25,11 @@ p {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  position: relative;
+  left: 30px;
+  top: -5px;
   display: inline;
   float: left;
-  margin-left: 40px;
 }
 
 ul.card {
