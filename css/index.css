@@ -66,8 +66,9 @@ h2 {
 
 .bird {
   z-index: 3;
-  margin: 50px;
   position: fixed;
+  left: 50px;
+  top: 300px;
 }
 
 .sliding-bg {

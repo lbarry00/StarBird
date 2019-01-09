@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   border: 0;
+  height: 100%;
 }
 
 h1 {
@@ -24,9 +25,10 @@ p {
 
 .bg-image {
   background-image: url("../img/game-screenshot.png");
-  background-origin: border-box;
-  background-position: 35%, 50%;
-  padding: 0;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10%;
   margin: 0;
   border: 0;
 }
@@ -91,7 +93,7 @@ p {
   height: 50%;
   align-self: center;
   background-color: white;
-  padding: 50px;
+  padding: 30px;
 }
 
 @media screen and (max-height: 450px) {
