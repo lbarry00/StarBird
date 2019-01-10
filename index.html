@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/index.css">
+  <script src="javascript/index.js" defer></script>
   <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway|ZCOOL+QingKe+HuangYou" rel="stylesheet">
-  <script src="js/index.js"></script>
   <title>Space Bird</title>
 </head>
 
-<body>
+<body onload="docReady()">
   <iframe
   src="music/Blob-Monsters-Return.mp3"
   allow="autoplay"
@@ -30,9 +30,8 @@
   </ul>
 
   <div class="viewer">
-    <div class="bird"><img src="img/horizontalBird.gif"></div>
-    <div class="sliding-bg">
-      <div class="sliding-asteroid"></div>
+    <img id = "bird" src="img/horizontalBird.gif">
+    <div class="sliding-bg">  
       <div class="sliding-galaxy"></div>
     </div>
   </div>

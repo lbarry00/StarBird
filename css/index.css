@@ -70,11 +70,9 @@ h2 {
   background-color: #9740F9;
 }
 
-.bird {
+#bird{
   z-index: 3;
-  top: 20em;
-  left: 10em;
-  position: fixed;
+  position: absolute;
   left: 50px;
   top: 300px;
 }
