@@ -1,0 +1,51 @@
+.asteroid1 {
+  z-index: 3;
+  position: fixed;
+  margin: 0px;
+  background: url("../img/asteroid1.png") repeat-x repeat-y;
+  animation: asteroid1 4s linear infinite;
+}
+
+@keyframes asteroid1{
+  0%{
+    transform: translate3d(1400px, 0, 0);
+  }
+  100%{
+    transform: translate3d(-100px, 0, 0);
+  }
+}
+
+.asteroid2 {
+  z-index: 3;
+  position: fixed;
+  margin: 0px;
+  background: url("../img/asteroid2.png") repeat-x repeat-y;
+  animation: asteroid2 5s linear infinite;
+  top: 450px;
+}
+
+@keyframes asteroid2{
+  0%{
+    transform: translate3d(1800px, 0, 0);
+  }
+  100%{
+    transform: translate3d(-100px, 0, 0);
+  }
+}
+
+.asteroid3 {
+  z-index: 3;
+  position: fixed;
+  margin: 0px;
+  background: url("../img/asteroid1.png") repeat-x repeat-y;
+  animation: asteroid3 7s linear infinite;
+}
+
+@keyframes asteroid3{
+  0%{
+    transform: translate3d(1900px, 0, 0);
+  }
+  100%{
+    transform: translate3d(-100px, 0, 0);
+  }
+}

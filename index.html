@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/index.css">
-  <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway|ZCOOL+QingKe+HuangYou" rel="stylesheet">
-  <script src="js/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="stylesheet" type="text/css" href="css/asteroid.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway|ZCOOL+QingKe+HuangYou" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <title>Space Bird</title>
 </head>
 
@@ -30,12 +31,15 @@
   </ul>
 
   <div class="viewer">
-    <div class="bird"><img src="img/horizontalBird.gif"></div>
+    <img class="asteroid1" id="asteroid1" src="img/asteroid1.png" />
+    <img class="asteroid2" id="asteroid2" src="img/asteroid2.png" />
+    <img class="asteroid3" id="asteroid3" src="img/asteroid1.png" />
+    <div class="bird"><img id="bird" src="img/horizontalBird.gif"></div>
     <div class="sliding-bg">
-      <div class="sliding-asteroid"></div>
       <div class="sliding-galaxy"></div>
     </div>
   </div>
 
 </body>
+<script src="js/asteroid.js"></script>
 </html>
