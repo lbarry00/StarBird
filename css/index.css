@@ -124,36 +124,45 @@ h2 {
 }
 
 .gameoverscreen {
+    overflow: hidden;
     z-index: 8;
-    display: block;
-    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+#gameover {
+    position: absolute;
+    top: 50%;
 }
 
 .gameover {
     z-index: 9;
-    position: absolute;
+    position: relative;
     color: white;
     text-shadow: 3px 7px black;
     text-align: center;
-    border: 3px solid black;
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 100%;
-    width: 100%;
+    padding: 1em;
     -moz-user-select: -moz-none;
    -khtml-user-select: none;
    -webkit-user-select: none;
-   margin: 0;
+    margin: 0;
 }
 
 .playagain {
     z-index: 9;
-    position: absolute;
     color: white;
+    position: relative;
     text-shadow: 1px 3px black;
     text-align: center;
     text-decoration: none;
     -moz-user-select: -moz-none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    margin: auto;
+    font-size: 1.3em;
 }
