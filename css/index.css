@@ -73,7 +73,7 @@ h2 {
 #bird{
   z-index: 3;
   position: absolute;
-  left: 50px;
+  left: 150px;
   top: 300px;
 }
 
@@ -124,7 +124,7 @@ h2 {
   position: fixed;
   margin: 0px;
   background: url("../img/galaxy_layer.png") repeat-x;
-  height: 500px;
+  height: 600px;
   width: 9090px;
   animation: slide2 60s linear infinite;
 }
