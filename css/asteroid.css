@@ -1,44 +1,11 @@
-.asteroid1 {
-  z-index: 3;
+.asteroid {
+  z-index: 4;
   position: fixed;
   margin: 0px;
-  animation: asteroid1 4s linear infinite;
+  animation: asteroid 4s linear forwards;
 }
 
-@keyframes asteroid1{
-  0%{
-    transform: translate3d(110vw, 0, 0);
-  }
-  100%{
-    transform: translate3d(-10vw, 0, 0);
-  }
-}
-
-.asteroid2 {
-  z-index: 3;
-  position: fixed;
-  margin: 0px;
-  animation: asteroid2 5s linear infinite;
-  top: 450px;
-}
-
-@keyframes asteroid2{
-  0%{
-    transform: translate3d(110vw, 0, 0);
-  }
-  100%{
-    transform: translate3d(-10vw, 0, 0);
-  }
-}
-
-.asteroid3 {
-  z-index: 3;
-  position: fixed;
-  margin: 0px;
-  animation: asteroid3 7s linear infinite;
-}
-
-@keyframes asteroid3{
+@keyframes asteroid{
   0%{
     transform: translate3d(110vw, 0, 0);
   }
