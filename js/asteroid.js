@@ -1,5 +1,5 @@
 function getRandomHeight() {
-    // Height is in vh, so generate a number between 0 and 100
+    // Height is in vh
     let min = 27;
     let max = 89;
     var height = Math.floor(Math.random() * (max-min) + min);
@@ -12,38 +12,55 @@ function getRandomSpeed() {
     return speed;
 }
 
+var asteroidIncrement = 1;
+var gameRunning = true;
+setInterval(function() {
+    if (gameRunning) {
+        var randomAsteroidType = Math.floor(Math.random() * 2);
+        var isAsteroidOne;
+        if (randomAsteroidType % 2 == 0) {
+            isAsteroidOne = true;
+        } else {
+            isAsteroidOne = false;
+        }
+
+        let $asteroid;
+        if (isAsteroidOne) {
+            $asteroid = $("<img src='img/asteroid1.png' />");
+        } else {
+            $asteroid = $("<img src='img/asteroid2.png' />");
+        }
+        $asteroid.addClass("asteroid");
+        var id = "asteroid" + asteroidIncrement;
+        $asteroid.attr("id", id);
+
+        let height = getRandomHeight();
+        let speed = getRandomSpeed();
+
+        $asteroid.css("transition-duration", speed + "s");
+        $asteroid.css("top", height + "vh");
+
+        $("#viewer").append($asteroid);
+
+        setTimeout(function() {
+            $("#" + id).remove();
+        }, speed*1000);
+
+        asteroidIncrement++; // For keeping track of which asteroid to remove
+    }
+}, 3000);
 
 setInterval(function() {
-    var asteroidIncrement = 1;
-    var randomAsteroidType = Math.floor(Math.random() * 2);
-    var isAsteroidOne;
-    if (randomAsteroidType % 2 == 0) {
-        isAsteroidOne = true;
-    } else {
-        isAsteroidOne = false;
+    var collisionList = $("#bird").collision(".asteroid");
+
+    if (collisionList.length > 0) {
+        $(".asteroid").remove();
+        $("#bird").remove();
+
+        gameRunning = false;
+        var $gameOver = $("<h1 class='gameover'>Game Over!</h1>");
+        var $playAgain = $("<a href='index.html' class='playagain'>Reload to play again.</a>")
+        $("#gameover").prepend($playAgain);
+        $("#gameover").prepend($gameOver);
     }
-
-    let $asteroid;
-    if (isAsteroidOne) {
-        $asteroid = $("<img src='img/asteroid1.png' />");
-    } else {
-        $asteroid = $("<img src='img/asteroid2.png' />");
-    }
-    $asteroid.addClass("asteroid");
-    var id = "asteroid" + asteroidIncrement;
-    $asteroid.attr("id", id);
-
-    let height = getRandomHeight();
-    let speed = getRandomSpeed();
-
-    $asteroid.css("transition-duration", speed + "s");
-    $asteroid.css("top", height + "vh");
-
-    $("#viewer").append($asteroid);
-
-    setTimeout(function() {
-        $("#" + id).remove();
-    }, speed*1000);
-
-    asteroidIncrement++; // For keeping track of which asteroid to remove
-}, 2000);
+}, 25);

@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/asteroid.css" />
   <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway|ZCOOL+QingKe+HuangYou" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="js/jquery-collision.min.js"></script>
   <title>Space Bird</title>
 </head>
 
@@ -31,12 +32,15 @@
   </ul>
 
   <div id="viewer">
-    <div class="bird"><img id="bird" src="img/horizontalBird.gif"></div>
     <div class="sliding-bg">
-      <div class="sliding-galaxy"></div>
+        <div class="sliding-galaxy"></div>
     </div>
+  </div>
+
+  <div class="gameoverscreen" id="gameover">
   </div>
 
 </body>
 <script src="js/asteroid.js"></script>
+<script src="js/bird.js"></script>
 </html>
