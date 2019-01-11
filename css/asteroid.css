@@ -2,7 +2,9 @@
   z-index: 4;
   position: fixed;
   margin: 0px;
-  animation: asteroid 4s linear forwards;
+  animation-name: asteroid;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
 
 @keyframes asteroid{

@@ -31,13 +31,13 @@ setInterval(function() {
             $asteroid = $("<img src='img/asteroid2.png' />");
         }
         $asteroid.addClass("asteroid");
-        var id = "asteroid" + asteroidIncrement;
+        let id = "asteroid" + asteroidIncrement;
         $asteroid.attr("id", id);
 
         let height = getRandomHeight();
         let speed = getRandomSpeed();
 
-        $asteroid.css("transition-duration", speed + "s");
+        $asteroid.css("animation-duration", speed + "s");
         $asteroid.css("top", height + "vh");
 
         $("#viewer").append($asteroid);
@@ -48,7 +48,7 @@ setInterval(function() {
 
         asteroidIncrement++; // For keeping track of which asteroid to remove
     }
-}, 3000);
+}, 2000);
 
 setInterval(function() {
     var collisionList = $("#bird").collision(".asteroid");
