@@ -8,10 +8,10 @@
 
 @keyframes asteroid1{
   0%{
-    transform: translate3d(1400px, 0, 0);
+    transform: translate3d(110vw, 0, 0);
   }
   100%{
-    transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-10vw, 0, 0);
   }
 }
 
@@ -26,10 +26,10 @@
 
 @keyframes asteroid2{
   0%{
-    transform: translate3d(1800px, 0, 0);
+    transform: translate3d(110vw, 0, 0);
   }
   100%{
-    transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-10vw, 0, 0);
   }
 }
 
@@ -43,9 +43,9 @@
 
 @keyframes asteroid3{
   0%{
-    transform: translate3d(1900px, 0, 0);
+    transform: translate3d(110vw, 0, 0);
   }
   100%{
-    transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-10vw, 0, 0);
   }
 }
