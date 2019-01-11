@@ -2,7 +2,6 @@
   z-index: 3;
   position: fixed;
   margin: 0px;
-  background: url("../img/asteroid1.png") repeat-x repeat-y;
   animation: asteroid1 4s linear infinite;
 }
 
@@ -19,7 +18,6 @@
   z-index: 3;
   position: fixed;
   margin: 0px;
-  background: url("../img/asteroid2.png") repeat-x repeat-y;
   animation: asteroid2 5s linear infinite;
   top: 450px;
 }
@@ -37,7 +35,6 @@
   z-index: 3;
   position: fixed;
   margin: 0px;
-  background: url("../img/asteroid1.png") repeat-x repeat-y;
   animation: asteroid3 7s linear infinite;
 }
 
