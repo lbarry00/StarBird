@@ -83,6 +83,7 @@ h2 {
 #gameContainer {
   margin: 0;
   padding: 0;
+  overflow: hidden;
   height: 600px; /* Size of verticle dimension of the background image. inherit width from body (edge of screen).*/
   border-bottom: 10px solid #F9519A;
 }
