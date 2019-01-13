@@ -10,7 +10,7 @@ var $gameContainer;
 function getRandomPosition() {
     // Height is in vh--- Using px to play nice with the window dimensions.
     let min = $gameContainer.offset().top;
-    let max = $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom'));
+    let max = $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom-width'));
     var position = Math.floor(Math.random() * (max-min) + min);
     return position;
 }
@@ -57,8 +57,8 @@ setInterval(function() {
         $asteroid.css("width", size + "px"); /* What size, set height and width equal to preserve aspect ratio. KEEP THIS AN INTEGER!!! */
         $asteroid.css("height", size + "px");
         $asteroid.css("animation-duration", speed + "s"); /* How fast */
-        if (position + parseInt($asteroid.css('height')) > $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom'))) {   //Check if asteroid is too big for current position set.
-            position = $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom')) - parseInt($asteroid.css('height'));     //If so, set position to fit the meteor in the game.
+        if (position + parseInt($asteroid.css('height')) > $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom-width'))) {   //Check if asteroid is too big for current position set.
+            position = $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom-width')) - parseInt($asteroid.css('height'));     //If so, set position to fit the meteor in the game.
         } 
         
         $asteroid.css("top", position + "px"); /* What position on the y-axis */ 

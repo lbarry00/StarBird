@@ -23,8 +23,8 @@ function moveUp() { //Uses increments of 20 px, can change without consequences 
 }
 
 function moveDown() {
-    if (height + 20 > $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom')) - parseInt($bird.css('height'))) { //Need to add bird dimensions here to check if bird's bottom is at bottom. Include border check. 
-        height = $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom')) - parseInt($bird.css('height'));        //Set bird bottom to bottom of gameContainer.
+    if (height + 20 > $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom-width')) - parseInt($bird.css('height'))) { //Need to add bird dimensions here to check if bird's bottom is at bottom. Include border check. 
+        height = $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom-width')) - parseInt($bird.css('height'));        //Set bird bottom to bottom of gameContainer.
     } else {
         height += 20; //Else move bird down.
     }
