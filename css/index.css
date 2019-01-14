@@ -23,7 +23,6 @@ h2 {
   left: 30px;
   top: -5px;
   display: inline;
-  float: left;
 }
 
 .center-text{
@@ -103,15 +102,6 @@ h2 {
   }
 }
 
-@keyframes slide-galaxy{
-  0%{
-    transform: translate3d(0, 0, 0);
-  }
-  100%{
-    transform: translate3d(-3030px, 0, 0);
-  }
-}
-
 .sliding-galaxy {
   z-index: 2;
   margin: 0;
@@ -119,6 +109,15 @@ h2 {
   height: 100%;
   width: 100%;
   animation: slide-galaxy 60s linear infinite;
+}
+
+@keyframes slide-galaxy{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-3030px, 0, 0);
+  }
 }
 
 .bird {
