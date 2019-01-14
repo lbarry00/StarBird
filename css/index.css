@@ -102,15 +102,6 @@ h2 {
   }
 }
 
-.sliding-galaxy {
-  z-index: 2;
-  margin: 0;
-  background: url("../img/galaxy_layer.png") repeat-x;
-  height: 100%;
-  width: 100%;
-  animation: slide-galaxy 60s linear infinite;
-}
-
 @keyframes slide-galaxy{
   0%{
     transform: translate3d(0, 0, 0);
@@ -118,6 +109,15 @@ h2 {
   100%{
     transform: translate3d(-3030px, 0, 0);
   }
+}
+
+.sliding-galaxy {
+  z-index: 2;
+  margin: 0;
+  background: url("../img/galaxy_layer.png") repeat-x;
+  height: 100%;
+  width: 100%;
+  animation: slide-galaxy 60s linear infinite;
 }
 
 .bird {

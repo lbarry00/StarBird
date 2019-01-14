@@ -1,18 +1,14 @@
-/* Init gameover screen as hidden and set jquery for gameContainer */
-
-var $gameContainer;
-
+/* Init gameover screen as hidden */
 (function () {
     $("#gameover").hide();
-    $gameContainer = $("#gameContainer");
 })();
 
-function getRandomPosition() {
+function getRandomHeight() {
     // Height is in vh--- Using px to play nice with the window dimensions.
-    let min = $gameContainer.offset().top;
-    let max = $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom-width'));
-    var position = Math.floor(Math.random() * (max-min) + min);
-    return position;
+    let min = 170;
+    let max = 620;
+    var height = Math.floor(Math.random() * (max-min) + min);
+    return height;
 }
 
 function getRandomSpeed() {
@@ -24,6 +20,7 @@ function getRandomSpeed() {
 function getRandomSize() {
     //Generate a random size between 0.8 and 3.0
     var size = Math.floor(Math.random() * (250 - 30) + 30);
+    console.log("size is " + size);
     return size;
 }
 
@@ -50,21 +47,17 @@ setInterval(function() {
         $asteroid.attr("id", id);
 
         let size = getRandomSize();
-        let position = getRandomPosition();
+        let height = getRandomHeight() - parseInt($asteroid.css("height"), 10); /* Keep big asteroids in screen by subtracting height */
         let speed = getRandomSpeed();
 
 
-        $asteroid.css("width", size + "px"); /* What size, set height and width equal to preserve aspect ratio. KEEP THIS AN INTEGER!!! */
-        $asteroid.css("height", size + "px");
+        $asteroid.css("width", size + "px"); /* What size. auto height keeps aspect ratio */
+        $asteroid.css("height", "auto");
         $asteroid.css("animation-duration", speed + "s"); /* How fast */
-        if (position + parseInt($asteroid.css('height')) > $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom-width'))) {   //Check if asteroid is too big for current position set.
-            position = $gameContainer.offset().top + $gameContainer.outerHeight() - parseInt($gameContainer.css('border-bottom-width')) - parseInt($asteroid.css('height'));     //If so, set position to fit the meteor in the game.
-        } 
-        
-        $asteroid.css("top", position + "px"); /* What position on the y-axis */ 
+        $asteroid.css("top", height + "px"); /* What height */
 
 
-        $gameContainer.append($asteroid); //Make the asteroid.
+        $("#gameContainer").append($asteroid);
 
         setTimeout(function() {
             $("#" + id).remove();
