@@ -1,7 +1,12 @@
+/* Init gameover screen as hidden */
+(function () {
+    $("#gameover").hide();
+})();
+
 function getRandomHeight() {
-    // Height is in vh
-    let min = 27;
-    let max = 89;
+    // Height is in vh--- Using px to play nice with the window dimensions.
+    let min = 170;
+    let max = 620;
     var height = Math.floor(Math.random() * (max-min) + min);
     return height;
 }
@@ -10,6 +15,13 @@ function getRandomSpeed() {
     // Generate a random speed between 3-8 seconds
     var speed = Math.floor(Math.random() * (8 - 3) + 3);
     return speed;
+}
+
+function getRandomSize() {
+    //Generate a random size between 0.8 and 3.0
+    var size = Math.floor(Math.random() * (250 - 30) + 30);
+    console.log("size is " + size);
+    return size;
 }
 
 var asteroidIncrement = 1;
@@ -34,13 +46,18 @@ setInterval(function() {
         let id = "asteroid" + asteroidIncrement;
         $asteroid.attr("id", id);
 
-        let height = getRandomHeight();
+        let size = getRandomSize();
+        let height = getRandomHeight() - parseInt($asteroid.css("height"), 10); /* Keep big asteroids in screen by subtracting height */
         let speed = getRandomSpeed();
 
-        $asteroid.css("animation-duration", speed + "s");
-        $asteroid.css("top", height + "vh");
 
-        $("#viewer").append($asteroid);
+        $asteroid.css("width", size + "px"); /* What size. auto height keeps aspect ratio */
+        $asteroid.css("height", "auto");
+        $asteroid.css("animation-duration", speed + "s"); /* How fast */
+        $asteroid.css("top", height + "px"); /* What height */
+
+
+        $("#gameContainer").append($asteroid);
 
         setTimeout(function() {
             $("#" + id).remove();
@@ -58,9 +75,6 @@ setInterval(function() {
         $("#bird").remove();
 
         gameRunning = false;
-        var $gameOver = $("<h1 class='gameover'>Game Over!</h1>");
-        var $playAgain = $("<a href='index.html' class='playagain'>Reload to play again.</a>")
-        $("#gameover").prepend($playAgain);
-        $("#gameover").prepend($gameOver);
+        $("#gameover").show(); //Unhide gameover.
     }
 }, 25);

@@ -1,3 +1,5 @@
+/* General page formatting stuff */
+
 body {
   overflow: hidden;
   padding: 0;
@@ -20,10 +22,7 @@ h2 {
   position: relative;
   left: 30px;
   top: -5px;
-  width: 75px;
-  height: 75px;
   display: inline;
-  float: left;
 }
 
 .center-text{
@@ -32,7 +31,8 @@ h2 {
   width: 100%;
   text-align: center;
 }
-
+ /* Navigation Settings */
+ 
 .navbar{
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   font-size: 20px;
@@ -70,23 +70,26 @@ h2 {
   background-color: #9740F9;
 }
 
-.bird {
-  z-index: 3;
-  top: 20em;
-  left: 10em;
-  position: fixed;
-  left: 50px;
-  top: 50vh;
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Game formatting stuff */
+
+#gameContainer {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 600px; /* Size of verticle dimension of the background image. inherit width from body (edge of screen).*/
+  border-bottom: 10px solid #F9519A;
 }
 
 .sliding-bg {
   z-index: 1;
-  position: fixed;
-  margin: 0;
   background: url("../img/main_bg.png") repeat-x;
-  height: 500px;
-  width: 9000px;
-  height: 74%;
+  height: 100%;
+  width:  9090px;
   animation: slide-bg 60s linear infinite;
 }
 
@@ -110,17 +113,18 @@ h2 {
 
 .sliding-galaxy {
   z-index: 2;
-  position: fixed;
-  margin: 0px;
+  margin: 0;
   background: url("../img/galaxy_layer.png") repeat-x;
   height: 100%;
-  width: 9090px;
+  width: 100%;
   animation: slide-galaxy 60s linear infinite;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.bird {
+  z-index: 3;
+  position: fixed;
+  top: 20em;
+  left: 10em;
 }
 
 .gameoverscreen {
@@ -137,7 +141,7 @@ h2 {
 
 #gameover {
     position: absolute;
-    top: 50%;
+    top: 30%;
 }
 
 .gameover {
@@ -146,11 +150,12 @@ h2 {
     color: white;
     text-shadow: 3px 7px black;
     text-align: center;
+    margin: 0;
     padding: 1em;
     -moz-user-select: -moz-none;
    -khtml-user-select: none;
    -webkit-user-select: none;
-    margin: 0;
+
 }
 
 .playagain {

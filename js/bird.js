@@ -1,25 +1,27 @@
-var height = 50; // 50vh
 var $bird;
+var height;
+
 $(document).ready(function() {
     $bird = $("<img class='bird' id='bird' src='img/horizontalBird.gif'>")
-    $("#viewer").append($bird);
+    $("#gameContainer").append($bird);
+    height = parseInt($bird.css('top'), 10);  // 50vh Use $bird.css(top) instead to get height dynamically
 });
 
 function moveUp() {
-    if (height - 2 < 27) {
+    if (height - 2 < 170) {
         return 1;
     } else {
-        height -= 2;
-        $bird.css('top', height + "vh");
+        height -= 10;
+        $bird.css('top', height + "px");
     }
 }
 
 function moveDown() {
-    if (height + 2 > 80) {
+    if (height + 2 > 640) {
         return 1;
     } else {
-        height += 2;
-        $bird.css('top', height + "vh");
+        height += 10;
+        $bird.css('top', height + "px");
     }
 }
 
