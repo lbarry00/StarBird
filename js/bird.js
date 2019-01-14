@@ -8,7 +8,7 @@ $(document).ready(function() {
 });
 
 function moveUp() {
-    if (height - 2 < 170) {
+    if (height - 2 < 171) {
         return 1;
     } else {
         height -= 10;
@@ -17,7 +17,7 @@ function moveUp() {
 }
 
 function moveDown() {
-    if (height + 2 > 640) {
+    if (height + 2 > 641) {
         return 1;
     } else {
         height += 10;
